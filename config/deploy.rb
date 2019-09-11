@@ -38,6 +38,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 set :keep_releases, 5
 
 set :rbenv_ruby, '2.6.3'
+set :rbenv_custom_path, '/opt/rbenv'
 
 set :log_level, :debug
 # Uncomment the following to require manually verifying the host key before first deploy.
