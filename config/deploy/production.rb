@@ -3,7 +3,7 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
- server "3.115.84.81", user: "ec2-user", roles: %w{app db web}
+ server "3.115.84.81", user: "toshiaki", roles: %w{app db web}
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
@@ -41,8 +41,7 @@
 #
 # Global options
 # --------------
-  set :ssh_options, {
-    keys: [File.expand_path('~/.ssh/second-ontech-keypair.pem')],
+  set :ssh_options, keys: '~/.ssh/InternalApp2_key_rsa'
   }
 #
 # The server-based syntax can be used to override options:
