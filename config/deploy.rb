@@ -44,6 +44,23 @@ set :log_level, :debug
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 namespace :deploy do
+  desc 'Change permission'
+  task :init_permission do
+    on release_roles :all do
+      execute :sudo, :chown, '-R', "#{fetch(:user)}:#{fetch(:group)}", deploy_to
+    end
+  end
+
+  task :reset_permission do
+    on release_roles :all do
+      execute :sudo, :chown, '-R', "nginx:nginx", deploy_to
+    end
+  end
+
+  before :starting, :init_permission
+  after :finished, :reset_permission
+end
+
   desc 'Restart application'
   task :restart do
     invoke 'unicorn:restart'
