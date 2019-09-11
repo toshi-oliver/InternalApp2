@@ -24,7 +24,6 @@ test:
   <<: *default
   database: app_test
 
-
 production:
   <<: *default
   adapter: mysql2
