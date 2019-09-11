@@ -59,7 +59,6 @@ namespace :deploy do
 
   before :starting, :init_permission
   after :finished, :reset_permission
-end
 
   desc 'Restart application'
   task :restart do
