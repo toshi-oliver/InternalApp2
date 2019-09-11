@@ -21,7 +21,7 @@ set :deploy_to, "/var/www/InternalApp2"
 set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, "config/database.yml"
+set :linked_files, fetch(:linked_files, []).push("config/database.yml")
 set :linked_files, fetch(:linked_files, []).push("config/master.key")
 
 # Default value for linked_dirs is []
