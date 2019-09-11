@@ -42,7 +42,6 @@
 # Global options
 # --------------
   set :ssh_options, keys: '~/.ssh/InternalApp2_key_rsa'
-  }
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
