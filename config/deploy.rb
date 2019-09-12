@@ -26,6 +26,7 @@ set :linked_files, fetch(:linked_files, []).push("config/master.key")
 
 # Default value for linked_dirs is []
 # append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+# バージョンが変わっても共通で参照するディレクトリを指定
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 
 # Default value for default_env is {}
@@ -37,45 +38,21 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
+set :rbenv_type, :user
 set :rbenv_ruby, '2.6.3'
-set :rbenv_custom_path, '/opt/rbenv'
+
+## プロセス番号を記載したファイルの場所
+set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
+
+# Unicornの設定ファイルの場所
+set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
 
 set :log_level, :debug
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
-
-  desc 'Restart application'
   task :restart do
     invoke 'unicorn:restart'
-  end
-
-  desc 'Create database'
-  task :db_create do
-    on roles(:db) do |host|
-      with rails_env: fetch(:rails_env) do
-        within current_path do
-          execute :bundle, :exec, :rails, 'db:create'
-        end
-      end
-    end
-  end
-
-  desc 'Run seed'
-  task :seed do
-    on roles(:app) do
-      with rails_env: fetch(:rails_env) do
-        within current_path do
-          execute :bundle, :exec, :rails, 'db:seed'
-        end
-      end
-    end
-  end
-
-  after :publishing, :restart
-
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-    end
   end
 end
