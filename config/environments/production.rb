@@ -62,6 +62,16 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "app_#{Rails.env}"
+  #ActionMailer::Base.smtp_settings = {
+    #:user_name => 'your_sendgrid_username',
+    #:password => 'your_sendgrid_password',
+    #:domain => 'yourdomain.com',
+    #:address => 'smtp.sendgrid.net',
+    #:port => 587,
+    #:authentication => :plain,
+    #:enable_starttls_auto => true
+  #}
+
 
   config.action_mailer.perform_caching = false
 
