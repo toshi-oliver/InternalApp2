@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+html {
+  font-size: 62.5%;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../images/ontech_image.jpg) no-repeat fixed left bottom;
+  background-size: cover;
+  color: #000080;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: Roboto, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+.header {
+  padding: 170px 30px 80px;
+}
