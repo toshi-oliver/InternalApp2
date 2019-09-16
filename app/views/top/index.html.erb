@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>InternalApp</title>
+  <%= stylesheet_link_tag 'top' %>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header-wrapper">
+      <div class="header-box">
+        <h1 class="site-title">Parking OnTech</h1>
+        <p class="site-description">OnTechの契約見直しサービスは、<br>駐車場のオーナー様向けの<br>収益改善無料お見積りサイトです。</p>
+        <a class="button" href="/posts/new">サイト</a>
+      </div>
+      <div class="header-box">
+        <%= image_tag 'top_image.png', class: 'header-image' %>
+      </div>
+    </div>
+  </header>
+  <section class="about" id="about">
+    <h2 class="heading">ABOUT<h2>
+    <p class="about-text">
+      このサイトは駐車場の運営を見直したいお客様より,土地情報を査定フォームから入力していただき,<br>
+      入力された顧客管理データを,権限を持ったユーザーが管理できる社内管理ツールです。
+　　</p>
+  </section>
+  <section class="skills">
+    <h2 class="heading">SKILLS</h2>
+    <div class="skills-wrapper">
+      <div class="skill-box">
+        <%= image_tag 'RubyonRails.jpg', class: 'skill-image' %>
+        <div class="skill-title">RubyonRails</div>
+        <p class="skill-text">
+            バックエンド言語は<br>Ruby(v2.6.3),Rails(v5.2.3)<br>
+            を使用しました。
+        </p>
+      </div>
+      <div class="skill-box">
+        <%= image_tag 'Docker.jpeg', class: 'skill-image' %>
+        <div class="skill-title">Docker</div>
+        <p class="skill-text">
+            開発環境にて<br>Docker,Docker-compose<br>
+            を使用しました。
+        </p>
+      </div>
+      <div class="skill-box">
+        <%= image_tag 'AWS.png', class: 'skill-image' %>
+        <div class="skill-title">AWS</div>
+        <p class="skill-text">
+            本番環境にて<br>EC2,RDS,Route53,ELB<br>
+            を使用しました。
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="output">
+    <h2 class="heading">OUTPUT</h2>
+    <div class="output-box">
+      <a class="output-title" href="https://github.com/toshi-oliver/InternalApp2">github</a>
+    </div>
+  </section>
+  <footer class="footer">
+    ©︎On Tech
+  </footer>
+</body>
+</html>

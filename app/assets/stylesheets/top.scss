@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+html {
+  font-size: 62.5%;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: url('ontech_image.jpg') no-repeat fixed left bottom;
+  background-size: cover;
+  color: #333;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: Roboto, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+.header {
+  padding: 80px 30px 80px;
+  background-color: #fff;
+}
+
+.header-wrapper {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.header-box {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.header-image {
+  display: block;
+  width: 100%;
+}
+.site-title-sub {
+  margin: 0 0 30px;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+}
+
+.site-title {
+  margin: 50px 0 40px;
+  font-size: 7.0rem;
+}
+
+.site-description {
+  margin-bottom: 50px;
+  color: #333;
+  font-size: 2.4rem;
+}
+
+.button {
+  display: inline-block;
+  width: 120px;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #75A9FF;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+}
+.button:hover {
+  opacity: 0.8;
+}
+
+.about {
+  padding: 80px 30px;
+  color: #333;
+}
+
+.heading {
+  position: relative;
+  display: inline-block;
+  margin: 30px 0 15px;
+  padding-bottom: 15px;
+  letter-spacing: 2px;
+  font-size: 4rem;
+}
+.heading::before,
+.heading::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #333;
+}
+
+.heading::before {
+  bottom: 5px;
+}
+
+.about-text {
+  margin: 30px 0;
+  line-height: 2.5;
+}
+
+.skills {
+  padding: 80px 0;
+  background-color: #fff;
+  color: #333;
+}
+
+.skills-wrapper {
+  display: table;
+  width: 80%;
+  margin: 50px auto 0;
+  table-layout: fixed;
+}
+
+.skill-box {
+  display: table-cell;
+}
+
+.skill-title {
+  margin: 0 20px 20px;
+  font-size: 2rem;
+}
+
+.skill-text {
+  margin: 0 20px;
+  line-height: 2;
+}
+
+.skill-image {
+  display: block;
+  width: 150px;
+  margin: 0 auto 30px;
+}
+
+.output {
+  padding: 80px 0;
+  color: #333;
+}
+
+.output-box {
+  padding: 40px 0;
+
+}
+.output-title {
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+.footer {
+  padding: 12px 0;
+  font-size: 1.3rem;
+  background-color: #333;
+  color: #fff;
+  opacity: 0.7;
+}
