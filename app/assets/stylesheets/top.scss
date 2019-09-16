@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  background: url('/assets/images/ontech_image.jpg') no-repeat fixed left bottom;
+  background: url('ontech_image.jpg') no-repeat fixed left bottom;
   background-size: cover;
   color: #333;
   text-align: center;
@@ -56,8 +56,8 @@ body {
 
 .button {
   display: inline-block;
-  width: 195px;
-  padding: 20px;
+  width: 120px;
+  padding: 10px;
   border-radius: 30px;
   background-color: #75A9FF;
   color: #fff;
@@ -102,8 +102,56 @@ body {
 }
 
 .skills {
-  padding: 80px 30px;
+  padding: 80px 0;
   background-color: #fff;
   color: #333;
 }
 
+.skills-wrapper {
+  display: table;
+  width: 80%;
+  margin: 50px auto 0;
+  table-layout: fixed;
+}
+
+.skill-box {
+  display: table-cell;
+}
+
+.skill-title {
+  margin: 0 20px 20px;
+  font-size: 2rem;
+}
+
+.skill-text {
+  margin: 0 20px;
+  line-height: 2;
+}
+
+.skill-image {
+  display: block;
+  width: 150px;
+  margin: 0 auto 30px;
+}
+
+.output {
+  padding: 80px 0;
+  color: #333;
+}
+
+.output-box {
+  padding: 40px 0;
+
+}
+.output-title {
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+.footer {
+  padding: 12px 0;
+  font-size: 1.3rem;
+  background-color: #333;
+  color: #fff;
+  opacity: 0.7;
+}
