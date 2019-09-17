@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-if Rails.env =="development"
+if Rails.env =="production"
   (1..25).each do |i|
     Post.create(client_name: "テスト#{i}", email: "タイトル#{i}", parking_address: "東京都新宿区#{i}丁目")
   #Post.create(client_name: "toshiaki", email: "igpoid@gmail.com", phone_number: "090-4938-9103", near_station: "江古田", parking_address: "東京都新宿区高田馬場")
