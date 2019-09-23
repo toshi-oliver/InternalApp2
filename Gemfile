@@ -55,6 +55,8 @@ group :development, :test do
   gem 'capistrano3-unicorn'
   gem 'ed25519'
   gem 'bcrypt_pbkdf'
+  gem 'rspec-rails', '~> 3.8'
+
 end
 
 group :development do
