@@ -33,3 +33,9 @@ draw.ioによりER図を作成しました。
 # 進捗管理
 以下のスプレッドシートで進捗管理を行いました。
 https://docs.google.com/spreadsheets/d/1Ox4pVepnE9jNLuCmZV4CJCjhGUjWFX-wuR5dJ_uhLDE/edit#gid=1648527996
+
+# バージョン
+- ruby2.6.3
+- rails 5.2.3
+- MySQL 8.0.17
+- Docker 19.03.2
