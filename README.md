@@ -22,6 +22,7 @@ https://www.minaos.tokyo/
 - 登録された査定データをCSVエクスポート
 #### AWSを用いたデプロイ
 - EC2,nginx,unicornを用いたデプロイ
+- capystranoによるデプロイ自動化
 - DBはRDS,MySQLを使用
 - ELBによる負荷分散とSSL証明書のインストール
 #### rubocopの導入
