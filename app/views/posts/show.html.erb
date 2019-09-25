@@ -6,7 +6,7 @@
 <div class="post-show-wrapper">
   <div class='post-show-list'>
     <div class="post-show-list-top">
-      <%= link_to '一覧', posts_path, class: 'btn btn-info' %>
+      <%= link_to '一覧に戻る', posts_path, class: 'btn btn-info' %>
       <%= link_to '編集', edit_post_path(@post), class: 'btn btn-warning' %>
       <%= link_to '削除', post_path(@post), method: :delete, data: { confirm: "本当に削除しますか？" }, class: 'btn btn-danger' %>
       <%= link_to post_path(format: :csv) do %>
