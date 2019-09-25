@@ -19,28 +19,25 @@
     <%= f.submit "検索", {class: "btn btn-primary"} %>
   </div>
 <% end %>
-  <div class="posts-list">
-    <table class="table table-hover boards__table">
+  <%= paginate @posts %>
+    <table style="table-layout:fixed;width:100%;", class="table table-hover boards__table">
       <thead class="thead">
         <tr>
-          <th></th>
-          <th>NO</th>
-          <th>氏名</th>
-          <th>メール</th>
-          <th>住所</th>
-          <th>運営</th>
-          <th>賃料<br>(¥/月)</th>
-          <th>駐車台数</th>
-          <th>担当者</th>
-          <th>特記事項<br>(顧客用)</th>
-          <th>特記事項<br>(社員用)</th>
+          <th class="a">NO</th>
+          <th class="b">氏名</th>
+          <th class="c">メール</th>
+          <th class="d">住所</th>
+          <th class="e">運営</th>
+          <th class="f">賃料<br>(¥/月)</th>
+          <th class="g">駐車台数</th>
+          <th class="h">担当者</th>
+          <th class="i">特記事項<br>(顧客用)</th>
+          <th class="j">特記事項<br>(社員用)</th>
         </tr>
       </thead>
       <tbody>
         <% @posts.each do |post| %>
           <tr>
-            <td>
-            </td>
             <td><%= post.id %></td>
             <td><%= link_to post.client_name, post_path(post) %></td>
             <td><%= post.email %></td>
@@ -59,6 +56,4 @@
         <% end %>
       </tbody>
     </table>
-  <%= paginate @posts %>
-  </div>
 </div>
