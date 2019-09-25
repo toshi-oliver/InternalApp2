@@ -44,6 +44,9 @@ class Post < ApplicationRecord
   validates :desired_rent,
     length: { maximum: 10 }
 
+  validates :client_textarea,
+    length: { maximum: 250 }
+
   validates :user_textarea,
     length: { maximum: 250 }
   scope :recent, -> { order(created_at: :desc) }
