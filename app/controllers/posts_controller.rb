@@ -31,7 +31,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @post = Post.new(flash[:post])
   end
 
   def edit
@@ -56,7 +56,10 @@ class PostsController < ApplicationController
 
   def confirm_new
 
-    redirect_to new_post_path(@post) unless @post.valid?
+    redirect_to new_post_path, flash: {
+      post: @post,
+      error_messages: @post.errors.full_messages
+    } unless @post.valid?
   end
 
   private

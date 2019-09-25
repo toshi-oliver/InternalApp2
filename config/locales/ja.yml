@@ -5,6 +5,11 @@ ja:
         name: ユーザー名
         password: パスワード
         password_confirmation: パスワード（確認）
+      post:
+        client_name: 氏名
+        email: メールアドレス
+        phone_number: 電話番号
+        parking_address: 駐車場住所
   views:
     pagination:
       first: "&laquo; 最初"

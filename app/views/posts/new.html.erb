@@ -1,14 +1,16 @@
   <!-- Page Content -->
-    <% if flash[:notice] %>
-      <div class="alert alert-success"><%= flash[:notice] %></div>
-    <% end %>
-    <% if @post.errors.present?%>
-      <ul id="error_explanation">
-        <% @post.errors.full_messages.each do |message|%>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    <% end %>
+<% if flash[:notice] %>
+  <div class="alert alert-success"><%= flash[:notice] %></div>
+<% end %>
+<% if flash[:error_messages]  %>
+  <div class="alert alert-danger">
+    <ul>
+      <% flash[:error_messages].each do |msg|  %>
+        <li><%= msg %></li>
+      <% end %>
+    <ul>
+  </div>
+<% end %>
 <div class="container-fluid"> 
   <h1 class="mt-4" style="text-align: center;font-family: 'Roboto', sans-serif;">minaos</h1>
   <h3 class="mt-1" style="text-align: center;font-family: 'Roboto', sans-serif;">駐車場見直し本舗</h3>
