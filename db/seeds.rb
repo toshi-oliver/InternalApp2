@@ -5,10 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-if Rails.env =="development"
-  (5..8).each do |i|
+if Rails.env == "production"
+  (1..10).each do |i|
     #Post.create(client_name: "テスト#{i}", email: "タイトル#{i}", parking_address: "東京都新宿区#{i}丁目")
-   Post.create(client_name: "toshiaki", email: "igpoid@gmail.com", phone_number: "09049389103", near_station: "江古田", parking_address: "東京都新宿区高田馬場#{i}", user_id: "1")
+   Post.create(client_name: "山田太郎", email: "igpoid@gmail.com", phone_number: "09049389103", near_station: "江古田", parking_address: "東京都新宿区西落合#{i}丁目", user_id: "1")
   end
 
   User.create(name: "admin", email: "igpoid@ontech.tokyo", password: "password", password_confirmation: "password", admin: true)
