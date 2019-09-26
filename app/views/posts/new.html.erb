@@ -17,12 +17,12 @@
   <div class="post-form">
     <%= form_with model: @post, local: true, url: confirm_new_post_path do |f| %>
       <div class="form-group">
-        <%= f.label :client_name, '1.氏名をご記入ください。' %><sp><font size="-1" color="red">※</font></sp>
+        <h6> 1.氏名をご記入ください。 <span class="badge-pill badge-danger"><font size="-1">必須</font><span></h6>
         <%= f.text_field :client_name, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :email, '2.メールアドレスをご記入ください。' %><sp><font size="-1" color="red">※</font></sp>
+        <h6> 2.メールアドレスをご記入ください。 <span class="badge-pill badge-danger"><font size="-1">必須</font><span></h6>
         <%= f.text_field :email, class: 'form-control' %>
       </div>
 
@@ -37,7 +37,7 @@
       </div>
 
       <div class="form-group">
-        <%= f.label :parking_address, '5.駐車場の住所をご記入ください。' %><sp><font size="-1" color="red">※</font></sp>
+        <h6> 5.駐車場の住所をご記入ください。 <span class="badge-pill badge-danger"><font size="-1">必須</font><span></h6>
         <%= f.text_field :parking_address, class: 'form-control' %>
       </div>
 
