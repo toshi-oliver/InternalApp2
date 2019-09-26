@@ -57,6 +57,7 @@ group :development, :test do
   gem 'bcrypt_pbkdf'
   gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot_rails', '~>4.11'
+  gem 'rubocop', '~> 0.74.0', require: false
 end
 
 group :development do
