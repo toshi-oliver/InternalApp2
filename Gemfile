@@ -54,8 +54,14 @@ group :development, :test do
   gem 'capistrano-rbenv'
   gem 'capistrano3-unicorn'
   gem 'ed25519'
+<<<<<<< HEAD
   gem 'factory_bot_rails', '~>4.11'
   gem 'rspec-rails', '~> 3.8'
+=======
+  gem 'bcrypt_pbkdf'
+  gem 'rspec-rails', '~> 3.8'
+  gem 'factory_bot_rails', '~>4.11'
+>>>>>>> 0be3d8f6adc77a2a056d8f9f77f03e3d786734a0
   gem 'rubocop', '~> 0.74.0', require: false
 end
 
