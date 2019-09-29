@@ -55,7 +55,6 @@ group :development, :test do
   gem 'capistrano3-unicorn'
   gem 'ed25519'
   gem 'bcrypt_pbkdf'
-  gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot_rails', '~>4.11'
   gem 'rubocop', '~> 0.74.0', require: false
 end
@@ -76,6 +75,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'webdrivers'
+  gem 'rspec-rails', '~> 3.8'
 end
 
 group :production do

@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :post do
-    name {'テストクライアント'}
+    client_name {'テストクライアント'}
     email {'test_client@example.com'}
     phone_number {'09049389103'}
     near_station {'江古田駅'}
