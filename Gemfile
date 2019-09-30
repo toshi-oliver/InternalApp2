@@ -37,7 +37,6 @@ gem "nokogiri"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootstrap', '~> 4.3.1'
-gem 'jquery-turbolinks'
 gem 'paranoia'
 gem 'rails_autolink'
 gem 'ransack'
