@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-gem 'nokogiri'
+gem "nokogiri"
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -38,16 +38,16 @@ gem 'nokogiri'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-turbolinks'
-gem 'kaminari'
 gem 'paranoia'
-gem 'rails-i18n'
 gem 'rails_autolink'
 gem 'ransack'
+gem 'kaminari'
+gem 'rails-i18n'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'bcrypt_pbkdf'
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capistrano'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
@@ -55,18 +55,16 @@ group :development, :test do
   gem 'capistrano3-unicorn'
   gem 'ed25519'
   gem 'bcrypt_pbkdf'
-  gem 'factory_bot_rails', '~>4.11'
-  gem 'rubocop', '~> 0.74.0', require: false
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'web-console', '>= 3.3.0'
+  gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'pry-byebug'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'pry-byebug'
 end
 
 group :test do
@@ -75,7 +73,6 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'webdrivers'
-  gem 'rspec-rails', '~> 3.8'
 end
 
 group :production do
@@ -83,4 +80,4 @@ group :production do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
