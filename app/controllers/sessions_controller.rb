@@ -1,11 +1,10 @@
 class SessionsController < ApplicationController
-  def new
-  end
+  def new; end
 
   def create
     user = User.find_by(email: session_params[:email])
 
-    if user && user.authenticate(session_params[:password])
+    if user&.authenticate(session_params[:password])
       session[:user_id] = user.id
       redirect_to new_post_url, notice: "#{user.name}さんがログインしました。"
     else
@@ -15,10 +14,10 @@ class SessionsController < ApplicationController
 
   def destroy
     reset_session
-    redirect_to new_post_url, notice: "ログアウトしました。"
+    redirect_to new_post_url, notice: 'ログアウトしました。'
   end
 
-private
+  private
 
   def session_params
     params.require(:session).permit(:email, :password)
