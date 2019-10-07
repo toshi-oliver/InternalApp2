@@ -18,5 +18,12 @@ module App
     config.i18n.default_locale = :ja
     config.time_zone = 'Tokyo'
     config.generators.javascript_engine = :js
+    config.generators do |g|
+      g.test_framework :rspec,
+      fixtures: false,
+      view_specs: false,
+      helper_specs: false,
+      routing_spec: false
+    end
   end
 end
