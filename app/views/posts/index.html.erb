@@ -45,10 +45,10 @@
             <td><%= post.parking_present? ? "有" : "無" %></td>
             <td><%= post.rent %></td>
             <td><%= post.parking_possible_number %></td>
-          <% if post.user.present? %>
-            <td><%= post.user.name %></td>
-          <% else %>
+          <% if post.user == nil %>
             <td>なし</td>
+          <% else %>
+            <td><%= post.user.name %></td>
           <% end %>
             <td><%= post.client_textarea %></td>
             <td><%= post.user_textarea %></td>
