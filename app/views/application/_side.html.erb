@@ -1,20 +1,21 @@
-<nav class="nav-main__nav" id="sidebar-wrapper">
-  <ul class="nav-main">
-    <li class="nav-main__item">
-      <a class="nav-main__link" href="/">
-        <i class="nav-main__icon fa fa-file-text-o"></i>
-        <span class="nav-main__label" style="font-family: 'Roboto', sans-serif;">On Tech</span>
-      </a>
-    </li>
+<nav class="nav-main" style="font-family: 'Roboto', sans-serif;" id="sidebar-wrapper">
+  <div class="nav-main__item">
+    <a class="nav-main__link" href="/">
+      <div class="nav-main__label" >On Tech</div>
+    </a>
+  </div>
+  <ul class="nav-main__nav">
     <li class="nav-main__item">
       <a class="nav-main__link" href="/posts/new">
         <i class="nav-main__icon fa-2x fas fa-home "></i>
+        <p>HOME</p>
       </a>
     </li>
     <li class="nav-main__item">
     <% if @current_user %>
       <a class="nav-main__link" href="/posts">
         <i class="nav-main__icon fas fa-file-alt fa-2x"></i>
+        <p>LIST</p>
       </a>
     <% end %>
     </li>
