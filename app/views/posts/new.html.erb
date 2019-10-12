@@ -11,10 +11,12 @@
     <ul>
   </div>
 <% end %>
-<div class="container-fluid"> 
-  <h1 class="mt-4" style="text-align: center;font-family: 'Roboto', sans-serif;">minaos</h1>
-  <h3 class="mt-1" style="text-align: center;font-family: 'Kosugi Maru', sans-serif;">駐車場見直し本舗</h3>
-  <div class="post-form">
+<body> 
+  <header>
+    minaos
+    <p style="text-align: center; font-size: 26px;">駐車場見直し本舗</p>
+  </header>
+  <div class="form-wrapper">
     <%= form_with model: @post, local: true, url: confirm_new_post_path do |f| %>
       <div class="form-group">
         <%= f.label :client_name do %>
@@ -93,6 +95,7 @@
             <%= f.radio_button :midterm_cancellation, false, {} %> 無
           </label>
         </div>
+      </div>
 
       <div class="form-group">
         <%= f.label :cancellation_period, '10.解約告知期間をご記入ください。', {class: 'form-label'} %>
@@ -104,7 +107,7 @@
         </div>
       </div>
 
-        <div class="form-group">
+      <div class="form-group">
         <%= f.label :cancellation_money, '11.中途解約金がある場合はご記入ください。', {class: 'form-label'} %>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
@@ -115,16 +118,18 @@
             <span class="input-group-text">円</span>
           </div>
         </div>
+      </div>
 
       <div class="form-group">
-      <%= f.label :rent, '12.現在の1ヶ月賃料をご記入ください。', {class: 'form-label'} %>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text">¥</span>
-        </div>
-        <%= f.text_field :rent, class: 'form-control' %>
-        <div class="input-group-append">
-          <span class="input-group-text">円/月</span>
+        <%= f.label :rent, '12.現在の1ヶ月賃料をご記入ください。', {class: 'form-label'} %>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">¥</span>
+          </div>
+          <%= f.text_field :rent, class: 'form-control' %>
+          <div class="input-group-append">
+            <span class="input-group-text">円/月</span>
+          </div>
         </div>
       </div>
 
@@ -186,19 +191,19 @@
             <span class="input-group-text">円/月</span>
           </div>
         </div>
+      </div>
 
-        <div class="form-group">
-          <%= f.label :client_textarea, '19.その他特記事項（ご相談・お悩みなど）', {class: 'form-label'} %><sp><font size="-1">※250字以内</font></sp>
-          <div class="input-group mb-3">
-            <%= f.text_area :client_textarea, :placeholder => "今後の展望等ございましたらご記入ください。", rows: 5, class: "form-control" %>
-          </div>
+      <div class="form-group">
+        <%= f.label :client_textarea, '19.その他特記事項（ご相談・お悩みなど）', {class: 'form-label'} %><sp><font size="-1">※250字以内</font></sp>
+        <div class="input-group mb-3">
+          <%= f.text_area :client_textarea, :placeholder => "今後の展望等ございましたらご記入ください。", rows: 5, class: "form-control" %>
         </div>
+      </div>
 
-        <div class="regist-form">
-          <%= f.submit "確認する", {class: "btn btn-primary"} %>
-        </div>
+      <div class="regist-form">
+        <%= f.submit "確認する", {class: "btn btn-primary"} %>
       </div>
     <% end %>
   </div>
-</div>
+</body>
 
