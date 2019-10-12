@@ -1,7 +1,7 @@
 <% if flash[:notice] %>
   <div class="alert alert-danger"><%= flash[:notice] %></div>
 <% end %>
-<h2 class="mt-4" style="text-align: center;">査定リスト</h2>
+<h2 class="mt-4" style="text-align: center; font-family: 'Kosugi Maru', sans-serif;">査定リスト</h2>
 
 <div class="posts-wrapper" >
 <%= search_form_for @q, class: "mb-5" do |f|%>
