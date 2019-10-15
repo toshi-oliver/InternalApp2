@@ -17,6 +17,7 @@
     <p style="text-align: center; font-size: 26px;">駐車場見直し本舗</p>
   </header>
   <div class="form-wrapper">
+    <div class="container">
     <%= form_with model: @post, local: true, url: confirm_new_post_path do |f| %>
       <div class="form-group">
         <%= f.label :client_name do %>
@@ -200,10 +201,16 @@
         </div>
       </div>
 
-      <div class="regist-form">
+      <div class="confirm-form">
         <%= f.submit "確認する", {class: "btn btn-primary"} %>
       </div>
     <% end %>
+    </div>
   </div>
+  <footer>
+    <div class="container">
+      <p style="text-align: center; font-size: 16px;">©︎On Tech</p>
+    </div>
+  </footer>
 </body>
 

@@ -1,21 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-light border-bottom" style="background-color:#efede0; font-family:'Kosugi Maru', sans-serif;">
+<div class="header-bar" style="font-family:'Kosugi Maru', sans-serif;">
   <button class="fas fa-bars fa-2x" id="menu-toggle"></button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-      <% if @current_user %>
-      <li class="nav-item">
-        <%= link_to 'ユーザーリスト', admin_users_path, class: 'btn btn-primary' %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'ログアウト', logout_path, method: :delete, class: 'btn btn-primary' %>
-      </li>
-      <li class="nav-item">
-        <i class="far fa-user-circle fa-2x" style="color: #75A9FF;"><span style= "font-size: 24px; font-family:'Kosugi Maru', sans-serif;"><%= @current_user.name %></span></i>
-      </li>
-      <% else %>
-      <li><%= link_to 'かんたんログイン', testsessions_path, method: :post, class: 'btn btn-primary' %></li>
-      <li><%= link_to 'ログイン', login_path, class: 'btn btn-primary' %></li>
-      <% end %>
-    </ul>
-  </div>
-</nav>
+  <ul class="header-bar-list">
+    <% if @current_user %>
+    <li>
+      <%= link_to 'ユーザーリスト', admin_users_path, class: 'btn btn-primary' %>
+    </li>
+    <li>
+      <%= link_to 'ログアウト', logout_path, method: :delete, class: 'btn btn-primary' %>
+    </li>
+    <li>
+      <i class="far fa-user-circle fa-2x" style="color: #75A9FF;"><span style= "font-size: 24px; font-family:'Kosugi Maru', sans-serif;"><%= @current_user.name %></span></i>
+    </li>
+    <% else %>
+    <li><%= link_to 'かんたんログイン', testsessions_path, method: :post, class: 'btn btn-primary' %></li>
+    <li><%= link_to 'ログイン', login_path, class: 'btn btn-primary' %></li>
+    <% end %>
+  </ul>
+</div>

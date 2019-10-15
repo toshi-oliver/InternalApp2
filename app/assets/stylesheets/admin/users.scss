@@ -15,19 +15,13 @@ body {
   border-radius: 8px;
 }
 
-.regist-form {
-  .btn {
-  margin-top: 30px;
+.btn-primary {
   background-color: #75A9FF;
   border-color: #75A9FF;
-  display: inline-block;
-  }
 }
 
-.btn-primary {
-  margin-left: 15px;
-  background-color: #75A9FF;
-  border-color: #75A9FF;
+.btn-primary:hover {
+  background-color: rgba(117, 169, 255, 0.7);
 }
 
 .users-list {
